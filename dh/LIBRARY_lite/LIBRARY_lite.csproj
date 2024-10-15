@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F8B0A97D-8E19-4347-9DD5-63788B74FB21}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LIBRARY_lite</RootNamespace>
+    <AssemblyName>LIBRARY_lite</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AUTHORS.cs">
+      <DependentUpon>BOOKS309updated.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BOOKS.cs">
+      <DependentUpon>BOOKS309updated.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BOOKS309.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BOOKS309.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BOOKS309.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BOOKS309.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BOOKS309.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BOOKS309.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="BOOKS309updated.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BOOKS309updated.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BOOKS309updated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BOOKS309updated.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BOOKS309updated.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BOOKS309updated.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="BOOKSdb.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BOOKSdb.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BOOKSdb.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BOOKSdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BOOKSdb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BOOKSdb.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="BOOK_LEND.cs">
+      <DependentUpon>BOOKS309updated.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EMPLOYEES.cs">
+      <DependentUpon>BOOKS309updated.tt</DependentUpon>
+    </Compile>
+    <Compile Include="INSTANCES.cs">
+      <DependentUpon>BOOKS309updated.tt</DependentUpon>
+    </Compile>
+    <Compile Include="INSTANCE_SETS.cs">
+      <DependentUpon>BOOKS309updated.tt</DependentUpon>
+    </Compile>
+    <Compile Include="INSTANCE_SET_CONTENTS.cs">
+      <DependentUpon>BOOKS309updated.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Books.xaml.cs">
+      <DependentUpon>Books.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Employees.xaml.cs">
+      <DependentUpon>Employees.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Readers.xaml.cs">
+      <DependentUpon>Readers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PUBLISHERS.cs">
+      <DependentUpon>BOOKS309updated.tt</DependentUpon>
+    </Compile>
+    <Compile Include="READERS.cs">
+      <DependentUpon>BOOKS309updated.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ROLES.cs">
+      <DependentUpon>BOOKS309updated.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USERS.cs">
+      <DependentUpon>BOOKS309updated.tt</DependentUpon>
+    </Compile>
+    <Compile Include="windows\AddBook.xaml.cs">
+      <DependentUpon>AddBook.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\AddEmployee.xaml.cs">
+      <DependentUpon>AddEmployee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\AddReader.xaml.cs">
+      <DependentUpon>AddReader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\auth.xaml.cs">
+      <DependentUpon>auth.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="windows\BOOKwindow.xaml.cs">
+      <DependentUpon>BOOKwindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="pages\Books.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\Employees.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\Readers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\AddBook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\AddEmployee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\AddReader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\auth.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\BOOKwindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="BOOKSdb.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BOOKSdb.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="BOOKS309.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BOOKS309.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BOOKS309.edmx.diagram">
+      <DependentUpon>BOOKS309.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="BOOKS309updated.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BOOKS309updated.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BOOKS309updated.edmx.diagram">
+      <DependentUpon>BOOKS309updated.edmx</DependentUpon>
+    </None>
+    <None Include="BOOKSdb.edmx.diagram">
+      <DependentUpon>BOOKSdb.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="BOOKS309.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BOOKS309.edmx</DependentUpon>
+      <LastGenOutput>BOOKS309.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BOOKS309.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BOOKS309.edmx</DependentUpon>
+      <LastGenOutput>BOOKS309.cs</LastGenOutput>
+    </Content>
+    <Content Include="BOOKS309updated.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BOOKS309updated.edmx</DependentUpon>
+      <LastGenOutput>BOOKS309updated.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BOOKS309updated.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BOOKS309updated.edmx</DependentUpon>
+      <LastGenOutput>BOOKS309updated.cs</LastGenOutput>
+    </Content>
+    <Content Include="BOOKSdb.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BOOKSdb.Context.cs</LastGenOutput>
+      <DependentUpon>BOOKSdb.edmx</DependentUpon>
+    </Content>
+    <Content Include="BOOKSdb.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BOOKSdb.edmx</DependentUpon>
+      <LastGenOutput>BOOKSdb.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

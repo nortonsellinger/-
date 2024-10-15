@@ -1,0 +1,31 @@
+﻿<Window x:Class="LIBRARY_lite.windows.DeletedEmployees"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LIBRARY_lite.windows"
+        mc:Ignorable="d"
+        Title="Удаленные сотрудники" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="EmployeesDG" Grid.Row="1" AutoGenerateColumns="False" FontSize="20" IsReadOnly="True"
+	        SelectionMode="Extended" ScrollViewer.CanContentScroll="False"
+                  Margin="0,0">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="ФИО" MinWidth="200" Width="2*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding EmployeeName}" TextWrapping="Wrap"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="" MinWidth="200" Width="1*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Восстановить" Click="revive_employee"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

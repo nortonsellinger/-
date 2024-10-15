@@ -1,0 +1,69 @@
+﻿<Window x:Class="LIBRARY_lite.windows.BOOKwindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:local="clr-namespace:LIBRARY_lite.windows"
+		mc:Ignorable="d"
+		Title="BOOKwindow" Height="600" Width="1200" WindowStartupLocation="CenterScreen">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto"/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="auto"/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<StackPanel Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal" Background="#eee">
+		</StackPanel>
+		<TextBlock Grid.Row="0" Grid.Column="0" FontSize="25" Margin="10, 5" Text="Анохина С.В."
+			VerticalAlignment="Center" HorizontalAlignment="Center"/>
+		<Grid Grid.Row="0" Grid.Column="1">
+			<TextBlock FontSize="25" FontWeight="Bold" Margin="10, 5" Text="Администратор" VerticalAlignment="Center"
+					   HorizontalAlignment="Left"/>
+			<Button HorizontalAlignment="Right" FontSize="25" Content="Сменить пользователя"
+				Padding="10, 5" Margin="5"/>
+		</Grid>
+		<Grid Grid.Row="1" Grid.Column="1" Background="#555">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="auto"/>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+            <ScrollViewer Grid.Row="0" HorizontalAlignment="Left"
+				VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Hidden">
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal" Background="#eee" Margin="10">
+                        <TextBlock FontSize="25" Margin="10, 5" Text="Приход № 545645" VerticalAlignment="Center"
+					HorizontalAlignment="Left" MaxWidth="210"/>
+                        <Button FontSize="25" Padding="2.5" Margin="5" VerticalAlignment="Center">
+                            <Button.Content>
+                                <Canvas Height="15" Width="15">
+                                    <Line StrokeThickness="2" Stroke="Red" X1="0" X2="15" Y1="0" Y2="15"/>
+                                    <Line StrokeThickness="2" Stroke="Red" X1="0" X2="15" Y1="15" Y2="0"/>
+                                </Canvas>
+                            </Button.Content>
+                        </Button>
+                    </StackPanel>
+                    
+                </StackPanel>
+            </ScrollViewer>
+            <Frame x:Name="frame" Grid.Row="1" Margin="10, 0, 10, 10" NavigationUIVisibility="Hidden"/>
+        </Grid>
+		
+		<Grid Grid.Row="1" Grid.Column="0" Background="#777">
+			<StackPanel Margin="5">
+				<Button FontSize="25" Content="Сотрудники"
+					Padding="10, 5" Margin="5" Click="open_employees"/>
+				<Button FontSize="25" Content="Читатели"
+					Padding="10, 5" Margin="5" Click="open_readers"/>
+				<Button FontSize="25" Content="Книги"
+					Padding="10, 5" Margin="5" Click="open_books"/>
+				<Button FontSize="25" Content="Выдача"
+					Padding="10, 5" Margin="5" Click="open_booklend"/>
+				<Button FontSize="25" Content="Статистика"
+					Padding="10, 5" Margin="5" Click="open_statistics"/>
+			</StackPanel>
+		</Grid>
+	</Grid>
+</Window>

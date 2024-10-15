@@ -1,0 +1,300 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|c:\\users\\is\\desktop\\\u0430\u043D\u043E\u0445\u0438\u043D\u0430\\library_lite\\library_lite\\library_lite\\pages\\bookloss.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:pages\\bookloss.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\booklend.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:pages\\booklend.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\lost_books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:lost_books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\windows\\bookwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:windows\\bookwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\publishers.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:pages\\publishers.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\publishers.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:pages\\publishers.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\authors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:pages\\authors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\authors.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:pages\\authors.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\readers.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:pages\\readers.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\readers.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:pages\\readers.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\windows\\addbooklend.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:windows\\addbooklend.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\books.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:pages\\books.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\books.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:pages\\books.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\windows\\editbook.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:windows\\editbook.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\windows\\editbook.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:windows\\editbook.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\windows\\addbook.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:windows\\addbook.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\windows\\addbook.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:windows\\addbook.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\windows\\addbooklend.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:windows\\addbooklend.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EditBook.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\windows\\EditBook.xaml.cs",
+              "RelativeDocumentMoniker": "windows\\EditBook.xaml.cs",
+              "ToolTip": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\windows\\EditBook.xaml.cs",
+              "RelativeToolTip": "windows\\EditBook.xaml.cs",
+              "ViewState": "AQIAAJ4AAAAAAAAAAAAnwMAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T06:06:16.375Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LOST_BOOKS.cs",
+              "DocumentMoniker": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\LOST_BOOKS.cs",
+              "RelativeDocumentMoniker": "LOST_BOOKS.cs",
+              "ToolTip": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\LOST_BOOKS.cs",
+              "RelativeToolTip": "LOST_BOOKS.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T08:04:57.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BookLoss.xaml",
+              "DocumentMoniker": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\BookLoss.xaml",
+              "RelativeDocumentMoniker": "pages\\BookLoss.xaml",
+              "ToolTip": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\BookLoss.xaml",
+              "RelativeToolTip": "pages\\BookLoss.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-23T08:00:21.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BookLend.xaml",
+              "DocumentMoniker": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\BookLend.xaml",
+              "RelativeDocumentMoniker": "pages\\BookLend.xaml",
+              "ToolTip": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\BookLend.xaml",
+              "RelativeToolTip": "pages\\BookLend.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-23T07:59:51.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Readers.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\Readers.xaml.cs",
+              "RelativeDocumentMoniker": "pages\\Readers.xaml.cs",
+              "ToolTip": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\Readers.xaml.cs",
+              "RelativeToolTip": "pages\\Readers.xaml.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAADwv0EAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T07:50:05.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Readers.xaml",
+              "DocumentMoniker": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\Readers.xaml",
+              "RelativeDocumentMoniker": "pages\\Readers.xaml",
+              "ToolTip": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\Readers.xaml",
+              "RelativeToolTip": "pages\\Readers.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-23T07:46:59.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Authors.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\Authors.xaml.cs",
+              "RelativeDocumentMoniker": "pages\\Authors.xaml.cs",
+              "ToolTip": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\Authors.xaml.cs",
+              "RelativeToolTip": "pages\\Authors.xaml.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAkwB4AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T07:41:33.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Authors.xaml",
+              "DocumentMoniker": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\Authors.xaml",
+              "RelativeDocumentMoniker": "pages\\Authors.xaml",
+              "ToolTip": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\Authors.xaml",
+              "RelativeToolTip": "pages\\Authors.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-23T07:41:14.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Publishers.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\Publishers.xaml.cs",
+              "RelativeDocumentMoniker": "pages\\Publishers.xaml.cs",
+              "ToolTip": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\Publishers.xaml.cs",
+              "RelativeToolTip": "pages\\Publishers.xaml.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAA6wB4AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T07:39:55.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Publishers.xaml",
+              "DocumentMoniker": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\Publishers.xaml",
+              "RelativeDocumentMoniker": "pages\\Publishers.xaml",
+              "ToolTip": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\Publishers.xaml",
+              "RelativeToolTip": "pages\\Publishers.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-23T07:39:31.032Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BOOKwindow.xaml",
+              "DocumentMoniker": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\windows\\BOOKwindow.xaml",
+              "RelativeDocumentMoniker": "windows\\BOOKwindow.xaml",
+              "ToolTip": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\windows\\BOOKwindow.xaml",
+              "RelativeToolTip": "windows\\BOOKwindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-23T07:39:25.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AddBook.xaml",
+              "DocumentMoniker": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\windows\\AddBook.xaml",
+              "RelativeDocumentMoniker": "windows\\AddBook.xaml",
+              "ToolTip": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\windows\\AddBook.xaml",
+              "RelativeToolTip": "windows\\AddBook.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-23T06:30:47.958Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AddBook.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\windows\\AddBook.xaml.cs",
+              "RelativeDocumentMoniker": "windows\\AddBook.xaml.cs",
+              "ToolTip": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\windows\\AddBook.xaml.cs",
+              "RelativeToolTip": "windows\\AddBook.xaml.cs",
+              "ViewState": "AQIAAMQAAAAAAAAAAAAUwOEAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T06:28:17.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EditBook.xaml",
+              "DocumentMoniker": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\windows\\EditBook.xaml",
+              "RelativeDocumentMoniker": "windows\\EditBook.xaml",
+              "ToolTip": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\windows\\EditBook.xaml",
+              "RelativeToolTip": "windows\\EditBook.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-23T06:25:09.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Books.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\Books.xaml.cs",
+              "RelativeDocumentMoniker": "pages\\Books.xaml.cs",
+              "ToolTip": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\Books.xaml.cs",
+              "RelativeToolTip": "pages\\Books.xaml.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAhwCgAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T06:21:09.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Books.xaml",
+              "DocumentMoniker": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\Books.xaml",
+              "RelativeDocumentMoniker": "pages\\Books.xaml",
+              "ToolTip": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\pages\\Books.xaml",
+              "RelativeToolTip": "pages\\Books.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-23T06:01:02.126Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AddBookLend.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\windows\\AddBookLend.xaml.cs",
+              "RelativeDocumentMoniker": "windows\\AddBookLend.xaml.cs",
+              "ToolTip": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\windows\\AddBookLend.xaml.cs",
+              "RelativeToolTip": "windows\\AddBookLend.xaml.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAgwC4AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T02:59:43.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AddBookLend.xaml",
+              "DocumentMoniker": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\windows\\AddBookLend.xaml",
+              "RelativeDocumentMoniker": "windows\\AddBookLend.xaml",
+              "ToolTip": "C:\\Users\\IS\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\LIBRARY_lite\\LIBRARY_lite\\LIBRARY_lite\\windows\\AddBookLend.xaml",
+              "RelativeToolTip": "windows\\AddBookLend.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-23T02:59:42.258Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

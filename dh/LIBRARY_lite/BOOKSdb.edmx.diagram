@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9793b6fed07c41e6b6a075f4943edcaf" Name="Diagram1">
+        <EntityTypeShape EntityType="LIBRARYCPModel.BOOK_LEND" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LIBRARYCPModel.BOOKS" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LIBRARYCPModel.EMPLOYEES" Width="1.5" PointX="8" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LIBRARYCPModel.INSTANCE_SET_CONTENTS" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LIBRARYCPModel.INSTANCE_SETS" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LIBRARYCPModel.INSTANCES" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="LIBRARYCPModel.READERS" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="LIBRARYCPModel.ROLES" Width="1.5" PointX="5.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LIBRARYCPModel.USERS" Width="1.5" PointX="10.25" PointY="5" IsExpanded="true" />
+        <AssociationConnector Association="LIBRARYCPModel.FK__BOOK_LEND__Insta__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="LIBRARYCPModel.FK__BOOK_LEND__Reade__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="LIBRARYCPModel.FK__INSTANCES__ISBN__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="LIBRARYCPModel.FK__EMPLOYEES__Emplo__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="LIBRARYCPModel.FK__USERS__EmployeeI__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="LIBRARYCPModel.FK__INSTANCE___Insta__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="LIBRARYCPModel.FK__INSTANCE___Insta__48CFD27E" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

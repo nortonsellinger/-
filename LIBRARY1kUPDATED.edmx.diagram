@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ad433768e3ff40719c09847067e3f750" Name="Diagram1">
+        <EntityTypeShape EntityType="libraryModel.AUTHORS" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.BOOK_SET_CONTENTS" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.BOOK_SETS" Width="1.5" PointX="3" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.BOOKLEND" Width="1.5" PointX="5.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.BOOKS" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.EMPLOYEES" Width="1.5" PointX="10" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.LOST_BOOKS" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.PUBLISHERS" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.READERS" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.ROLES" Width="1.5" PointX="7.75" PointY="2.5" IsExpanded="true" />
+        <AssociationConnector Association="libraryModel.FK__BOOKS__AuthorID__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.FK__BOOK_SET___BookI__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.FK__BOOK_SET___BookS__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.FK__BOOKLEND__BookSe__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.FK__BOOKLEND__Reader__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.FK__BOOKS__Publisher__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.FK__LOST_BOOK__BookI__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.FK__EMPLOYEES__RoleI__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.FK__LOST_BOOK__Reade__619B8048" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

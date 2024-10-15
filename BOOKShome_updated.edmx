@@ -1,0 +1,620 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище LIBRARYCP_updatedModel1" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AUTHORS">
+          <Key>
+            <PropertyRef Name="AuthorID" />
+          </Key>
+          <Property Name="AuthorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AuthorName" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BOOK_LEND">
+          <Key>
+            <PropertyRef Name="BookLendID" />
+          </Key>
+          <Property Name="BookLendID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ReaderID" Type="int" Nullable="false" />
+          <Property Name="InstanceSetID" Type="int" Nullable="false" />
+          <Property Name="LendDate" Type="date" Nullable="false" />
+          <Property Name="ExpReturnDate" Type="date" Nullable="false" />
+          <Property Name="ActReturnDate" Type="date" />
+          <Property Name="Prolongated" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BOOKS">
+          <Key>
+            <PropertyRef Name="ISBN" />
+          </Key>
+          <Property Name="ISBN" Type="nvarchar" MaxLength="13" Nullable="false" />
+          <Property Name="BookName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="BookAuthor" Type="int" Nullable="false" />
+          <Property Name="Publisher" Type="int" Nullable="false" />
+          <Property Name="PublDate" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="IsWorking" Type="bit" />
+        </EntityType>
+        <EntityType Name="EMPLOYEES">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="EmployeeRole" Type="int" Nullable="false" />
+          <Property Name="IsWorking" Type="bit" Nullable="false" />
+          <Property Name="ELogin" Type="nvarchar" MaxLength="50" />
+          <Property Name="EPassword" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="INSTANCE_SET_CONTENTS">
+          <Key>
+            <PropertyRef Name="InstanceSetContentID" />
+          </Key>
+          <Property Name="InstanceSetContentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InstanceSetID" Type="int" Nullable="false" />
+          <Property Name="InstanceID" Type="int" Nullable="false" />
+          <Property Name="ReturnDate" Type="date" />
+        </EntityType>
+        <EntityType Name="INSTANCE_SETS">
+          <Key>
+            <PropertyRef Name="InstanceSetID" />
+          </Key>
+          <Property Name="InstanceSetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InstanceName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="INSTANCES">
+          <Key>
+            <PropertyRef Name="InstanceID" />
+          </Key>
+          <Property Name="InstanceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ISBN" Type="nvarchar" MaxLength="13" Nullable="false" />
+          <Property Name="IsTaken" Type="bit" Nullable="false" />
+          <Property Name="IsWorking" Type="bit" />
+        </EntityType>
+        <EntityType Name="PUBLISHERS">
+          <Key>
+            <PropertyRef Name="PublisherID" />
+          </Key>
+          <Property Name="PublisherID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PublisherName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="IsWorking" Type="bit" />
+        </EntityType>
+        <EntityType Name="READERS">
+          <Key>
+            <PropertyRef Name="ReaderID" />
+          </Key>
+          <Property Name="ReaderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ReaderName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="BirthDate" Type="datetime" Nullable="false" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="IsReading" Type="bit" />
+        </EntityType>
+        <EntityType Name="ROLES">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__BOOK_LEND__Insta__49C3F6B7">
+          <End Role="INSTANCE_SETS" Type="Self.INSTANCE_SETS" Multiplicity="1" />
+          <End Role="BOOK_LEND" Type="Self.BOOK_LEND" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="INSTANCE_SETS">
+              <PropertyRef Name="InstanceSetID" />
+            </Principal>
+            <Dependent Role="BOOK_LEND">
+              <PropertyRef Name="InstanceSetID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOOK_LEND__Reade__48CFD27E">
+          <End Role="READERS" Type="Self.READERS" Multiplicity="1" />
+          <End Role="BOOK_LEND" Type="Self.BOOK_LEND" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="READERS">
+              <PropertyRef Name="ReaderID" />
+            </Principal>
+            <Dependent Role="BOOK_LEND">
+              <PropertyRef Name="ReaderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOOKS__BookAutho__4AB81AF0">
+          <End Role="AUTHORS" Type="Self.AUTHORS" Multiplicity="1" />
+          <End Role="BOOKS" Type="Self.BOOKS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AUTHORS">
+              <PropertyRef Name="AuthorID" />
+            </Principal>
+            <Dependent Role="BOOKS">
+              <PropertyRef Name="BookAuthor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOOKS__Publisher__4BAC3F29">
+          <End Role="PUBLISHERS" Type="Self.PUBLISHERS" Multiplicity="1" />
+          <End Role="BOOKS" Type="Self.BOOKS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PUBLISHERS">
+              <PropertyRef Name="PublisherID" />
+            </Principal>
+            <Dependent Role="BOOKS">
+              <PropertyRef Name="Publisher" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EMPLOYEES__Emplo__4CA06362">
+          <End Role="ROLES" Type="Self.ROLES" Multiplicity="1" />
+          <End Role="EMPLOYEES" Type="Self.EMPLOYEES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ROLES">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="EMPLOYEES">
+              <PropertyRef Name="EmployeeRole" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__INSTANCE___Insta__4D94879B">
+          <End Role="INSTANCE_SETS" Type="Self.INSTANCE_SETS" Multiplicity="1" />
+          <End Role="INSTANCE_SET_CONTENTS" Type="Self.INSTANCE_SET_CONTENTS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="INSTANCE_SETS">
+              <PropertyRef Name="InstanceSetID" />
+            </Principal>
+            <Dependent Role="INSTANCE_SET_CONTENTS">
+              <PropertyRef Name="InstanceSetID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__INSTANCE___Insta__4E88ABD4">
+          <End Role="INSTANCES" Type="Self.INSTANCES" Multiplicity="1" />
+          <End Role="INSTANCE_SET_CONTENTS" Type="Self.INSTANCE_SET_CONTENTS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="INSTANCES">
+              <PropertyRef Name="InstanceID" />
+            </Principal>
+            <Dependent Role="INSTANCE_SET_CONTENTS">
+              <PropertyRef Name="InstanceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__INSTANCES__ISBN__4F7CD00D">
+          <End Role="BOOKS" Type="Self.BOOKS" Multiplicity="1" />
+          <End Role="INSTANCES" Type="Self.INSTANCES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOOKS">
+              <PropertyRef Name="ISBN" />
+            </Principal>
+            <Dependent Role="INSTANCES">
+              <PropertyRef Name="ISBN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище LIBRARYCP_updatedModel1Container">
+          <EntitySet Name="AUTHORS" EntityType="Self.AUTHORS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BOOK_LEND" EntityType="Self.BOOK_LEND" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BOOKS" EntityType="Self.BOOKS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EMPLOYEES" EntityType="Self.EMPLOYEES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="INSTANCE_SET_CONTENTS" EntityType="Self.INSTANCE_SET_CONTENTS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="INSTANCE_SETS" EntityType="Self.INSTANCE_SETS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="INSTANCES" EntityType="Self.INSTANCES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PUBLISHERS" EntityType="Self.PUBLISHERS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="READERS" EntityType="Self.READERS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ROLES" EntityType="Self.ROLES" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__BOOK_LEND__Insta__49C3F6B7" Association="Self.FK__BOOK_LEND__Insta__49C3F6B7">
+            <End Role="INSTANCE_SETS" EntitySet="INSTANCE_SETS" />
+            <End Role="BOOK_LEND" EntitySet="BOOK_LEND" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOOK_LEND__Reade__48CFD27E" Association="Self.FK__BOOK_LEND__Reade__48CFD27E">
+            <End Role="READERS" EntitySet="READERS" />
+            <End Role="BOOK_LEND" EntitySet="BOOK_LEND" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOOKS__BookAutho__4AB81AF0" Association="Self.FK__BOOKS__BookAutho__4AB81AF0">
+            <End Role="AUTHORS" EntitySet="AUTHORS" />
+            <End Role="BOOKS" EntitySet="BOOKS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOOKS__Publisher__4BAC3F29" Association="Self.FK__BOOKS__Publisher__4BAC3F29">
+            <End Role="PUBLISHERS" EntitySet="PUBLISHERS" />
+            <End Role="BOOKS" EntitySet="BOOKS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EMPLOYEES__Emplo__4CA06362" Association="Self.FK__EMPLOYEES__Emplo__4CA06362">
+            <End Role="ROLES" EntitySet="ROLES" />
+            <End Role="EMPLOYEES" EntitySet="EMPLOYEES" />
+          </AssociationSet>
+          <AssociationSet Name="FK__INSTANCE___Insta__4D94879B" Association="Self.FK__INSTANCE___Insta__4D94879B">
+            <End Role="INSTANCE_SETS" EntitySet="INSTANCE_SETS" />
+            <End Role="INSTANCE_SET_CONTENTS" EntitySet="INSTANCE_SET_CONTENTS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__INSTANCE___Insta__4E88ABD4" Association="Self.FK__INSTANCE___Insta__4E88ABD4">
+            <End Role="INSTANCES" EntitySet="INSTANCES" />
+            <End Role="INSTANCE_SET_CONTENTS" EntitySet="INSTANCE_SET_CONTENTS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__INSTANCES__ISBN__4F7CD00D" Association="Self.FK__INSTANCES__ISBN__4F7CD00D">
+            <End Role="BOOKS" EntitySet="BOOKS" />
+            <End Role="INSTANCES" EntitySet="INSTANCES" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LIBRARYCP_updatedModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AUTHORS">
+          <Key>
+            <PropertyRef Name="AuthorID" />
+          </Key>
+          <Property Name="AuthorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AuthorName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="BOOKS" Relationship="Self.FK__BOOKS__BookAutho__4CA06362" FromRole="AUTHORS" ToRole="BOOKS" />
+        </EntityType>
+        <EntityType Name="BOOK_LEND">
+          <Key>
+            <PropertyRef Name="BookLendID" />
+          </Key>
+          <Property Name="BookLendID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ReaderID" Type="Int32" Nullable="false" />
+          <Property Name="InstanceSetID" Type="Int32" Nullable="false" />
+          <Property Name="LendDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ExpReturnDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ActReturnDate" Type="DateTime" Precision="0" />
+          <Property Name="Prolongated" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="INSTANCE_SETS" Relationship="Self.FK__BOOK_LEND__Insta__4BAC3F29" FromRole="BOOK_LEND" ToRole="INSTANCE_SETS" />
+          <NavigationProperty Name="READERS" Relationship="Self.FK__BOOK_LEND__Reade__4AB81AF0" FromRole="BOOK_LEND" ToRole="READERS" />
+        </EntityType>
+        <EntityType Name="BOOKS">
+          <Key>
+            <PropertyRef Name="ISBN" />
+          </Key>
+          <Property Name="ISBN" Type="String" MaxLength="13" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BookName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BookAuthor" Type="Int32" Nullable="false" />
+          <Property Name="Publisher" Type="Int32" Nullable="false" />
+          <Property Name="PublDate" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AUTHORS" Relationship="Self.FK__BOOKS__BookAutho__4CA06362" FromRole="BOOKS" ToRole="AUTHORS" />
+          <NavigationProperty Name="PUBLISHERS" Relationship="Self.FK__BOOKS__Publisher__4D94879B" FromRole="BOOKS" ToRole="PUBLISHERS" />
+          <NavigationProperty Name="INSTANCES" Relationship="Self.FK__INSTANCES__ISBN__5165187F" FromRole="BOOKS" ToRole="INSTANCES" />
+          <Property Name="IsWorking" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="EMPLOYEES">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmployeeRole" Type="Int32" Nullable="false" />
+          <Property Name="IsWorking" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="ROLES" Relationship="Self.FK__EMPLOYEES__Emplo__4E88ABD4" FromRole="EMPLOYEES" ToRole="ROLES" />
+          <Property Name="ELogin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="INSTANCE_SET_CONTENTS">
+          <Key>
+            <PropertyRef Name="InstanceSetContentID" />
+          </Key>
+          <Property Name="InstanceSetContentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InstanceSetID" Type="Int32" Nullable="false" />
+          <Property Name="InstanceID" Type="Int32" Nullable="false" />
+          <Property Name="ReturnDate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="INSTANCE_SETS" Relationship="Self.FK__INSTANCE___Insta__4F7CD00D" FromRole="INSTANCE_SET_CONTENTS" ToRole="INSTANCE_SETS" />
+          <NavigationProperty Name="INSTANCES" Relationship="Self.FK__INSTANCE___Insta__5070F446" FromRole="INSTANCE_SET_CONTENTS" ToRole="INSTANCES" />
+        </EntityType>
+        <EntityType Name="INSTANCE_SETS">
+          <Key>
+            <PropertyRef Name="InstanceSetID" />
+          </Key>
+          <Property Name="InstanceSetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InstanceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="BOOK_LEND" Relationship="Self.FK__BOOK_LEND__Insta__4BAC3F29" FromRole="INSTANCE_SETS" ToRole="BOOK_LEND" />
+          <NavigationProperty Name="INSTANCE_SET_CONTENTS" Relationship="Self.FK__INSTANCE___Insta__4F7CD00D" FromRole="INSTANCE_SETS" ToRole="INSTANCE_SET_CONTENTS" />
+        </EntityType>
+        <EntityType Name="INSTANCES">
+          <Key>
+            <PropertyRef Name="InstanceID" />
+          </Key>
+          <Property Name="InstanceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ISBN" Type="String" MaxLength="13" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IsTaken" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="BOOKS" Relationship="Self.FK__INSTANCES__ISBN__5165187F" FromRole="INSTANCES" ToRole="BOOKS" />
+          <NavigationProperty Name="INSTANCE_SET_CONTENTS" Relationship="Self.FK__INSTANCE___Insta__5070F446" FromRole="INSTANCES" ToRole="INSTANCE_SET_CONTENTS" />
+          <Property Name="IsWorking" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="PUBLISHERS">
+          <Key>
+            <PropertyRef Name="PublisherID" />
+          </Key>
+          <Property Name="PublisherID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PublisherName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="BOOKS" Relationship="Self.FK__BOOKS__Publisher__4D94879B" FromRole="PUBLISHERS" ToRole="BOOKS" />
+          <Property Name="IsWorking" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="READERS">
+          <Key>
+            <PropertyRef Name="ReaderID" />
+          </Key>
+          <Property Name="ReaderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ReaderName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BirthDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="BOOK_LEND" Relationship="Self.FK__BOOK_LEND__Reade__4AB81AF0" FromRole="READERS" ToRole="BOOK_LEND" />
+          <Property Name="IsReading" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="ROLES">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="EMPLOYEES" Relationship="Self.FK__EMPLOYEES__Emplo__4E88ABD4" FromRole="ROLES" ToRole="EMPLOYEES" />
+        </EntityType>
+        <Association Name="FK__BOOKS__BookAutho__4CA06362">
+          <End Role="AUTHORS" Type="Self.AUTHORS" Multiplicity="1" />
+          <End Role="BOOKS" Type="Self.BOOKS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AUTHORS">
+              <PropertyRef Name="AuthorID" />
+            </Principal>
+            <Dependent Role="BOOKS">
+              <PropertyRef Name="BookAuthor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOOK_LEND__Insta__4BAC3F29">
+          <End Role="INSTANCE_SETS" Type="Self.INSTANCE_SETS" Multiplicity="1" />
+          <End Role="BOOK_LEND" Type="Self.BOOK_LEND" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="INSTANCE_SETS">
+              <PropertyRef Name="InstanceSetID" />
+            </Principal>
+            <Dependent Role="BOOK_LEND">
+              <PropertyRef Name="InstanceSetID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOOK_LEND__Reade__4AB81AF0">
+          <End Role="READERS" Type="Self.READERS" Multiplicity="1" />
+          <End Role="BOOK_LEND" Type="Self.BOOK_LEND" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="READERS">
+              <PropertyRef Name="ReaderID" />
+            </Principal>
+            <Dependent Role="BOOK_LEND">
+              <PropertyRef Name="ReaderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOOKS__Publisher__4D94879B">
+          <End Role="PUBLISHERS" Type="Self.PUBLISHERS" Multiplicity="1" />
+          <End Role="BOOKS" Type="Self.BOOKS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PUBLISHERS">
+              <PropertyRef Name="PublisherID" />
+            </Principal>
+            <Dependent Role="BOOKS">
+              <PropertyRef Name="Publisher" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__INSTANCES__ISBN__5165187F">
+          <End Role="BOOKS" Type="Self.BOOKS" Multiplicity="1" />
+          <End Role="INSTANCES" Type="Self.INSTANCES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOOKS">
+              <PropertyRef Name="ISBN" />
+            </Principal>
+            <Dependent Role="INSTANCES">
+              <PropertyRef Name="ISBN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EMPLOYEES__Emplo__4E88ABD4">
+          <End Role="ROLES" Type="Self.ROLES" Multiplicity="1" />
+          <End Role="EMPLOYEES" Type="Self.EMPLOYEES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ROLES">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="EMPLOYEES">
+              <PropertyRef Name="EmployeeRole" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__INSTANCE___Insta__4F7CD00D">
+          <End Role="INSTANCE_SETS" Type="Self.INSTANCE_SETS" Multiplicity="1" />
+          <End Role="INSTANCE_SET_CONTENTS" Type="Self.INSTANCE_SET_CONTENTS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="INSTANCE_SETS">
+              <PropertyRef Name="InstanceSetID" />
+            </Principal>
+            <Dependent Role="INSTANCE_SET_CONTENTS">
+              <PropertyRef Name="InstanceSetID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__INSTANCE___Insta__5070F446">
+          <End Role="INSTANCES" Type="Self.INSTANCES" Multiplicity="1" />
+          <End Role="INSTANCE_SET_CONTENTS" Type="Self.INSTANCE_SET_CONTENTS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="INSTANCES">
+              <PropertyRef Name="InstanceID" />
+            </Principal>
+            <Dependent Role="INSTANCE_SET_CONTENTS">
+              <PropertyRef Name="InstanceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="LIBRARYCP_updatedEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AUTHORS" EntityType="Self.AUTHORS" />
+          <EntitySet Name="BOOK_LEND" EntityType="Self.BOOK_LEND" />
+          <EntitySet Name="BOOKS" EntityType="Self.BOOKS" />
+          <EntitySet Name="EMPLOYEES" EntityType="Self.EMPLOYEES" />
+          <EntitySet Name="INSTANCE_SET_CONTENTS" EntityType="Self.INSTANCE_SET_CONTENTS" />
+          <EntitySet Name="INSTANCE_SETS" EntityType="Self.INSTANCE_SETS" />
+          <EntitySet Name="INSTANCES" EntityType="Self.INSTANCES" />
+          <EntitySet Name="PUBLISHERS" EntityType="Self.PUBLISHERS" />
+          <EntitySet Name="READERS" EntityType="Self.READERS" />
+          <EntitySet Name="ROLES" EntityType="Self.ROLES" />
+          <AssociationSet Name="FK__BOOKS__BookAutho__4CA06362" Association="Self.FK__BOOKS__BookAutho__4CA06362">
+            <End Role="AUTHORS" EntitySet="AUTHORS" />
+            <End Role="BOOKS" EntitySet="BOOKS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOOK_LEND__Insta__4BAC3F29" Association="Self.FK__BOOK_LEND__Insta__4BAC3F29">
+            <End Role="INSTANCE_SETS" EntitySet="INSTANCE_SETS" />
+            <End Role="BOOK_LEND" EntitySet="BOOK_LEND" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOOK_LEND__Reade__4AB81AF0" Association="Self.FK__BOOK_LEND__Reade__4AB81AF0">
+            <End Role="READERS" EntitySet="READERS" />
+            <End Role="BOOK_LEND" EntitySet="BOOK_LEND" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOOKS__Publisher__4D94879B" Association="Self.FK__BOOKS__Publisher__4D94879B">
+            <End Role="PUBLISHERS" EntitySet="PUBLISHERS" />
+            <End Role="BOOKS" EntitySet="BOOKS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__INSTANCES__ISBN__5165187F" Association="Self.FK__INSTANCES__ISBN__5165187F">
+            <End Role="BOOKS" EntitySet="BOOKS" />
+            <End Role="INSTANCES" EntitySet="INSTANCES" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EMPLOYEES__Emplo__4E88ABD4" Association="Self.FK__EMPLOYEES__Emplo__4E88ABD4">
+            <End Role="ROLES" EntitySet="ROLES" />
+            <End Role="EMPLOYEES" EntitySet="EMPLOYEES" />
+          </AssociationSet>
+          <AssociationSet Name="FK__INSTANCE___Insta__4F7CD00D" Association="Self.FK__INSTANCE___Insta__4F7CD00D">
+            <End Role="INSTANCE_SETS" EntitySet="INSTANCE_SETS" />
+            <End Role="INSTANCE_SET_CONTENTS" EntitySet="INSTANCE_SET_CONTENTS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__INSTANCE___Insta__5070F446" Association="Self.FK__INSTANCE___Insta__5070F446">
+            <End Role="INSTANCES" EntitySet="INSTANCES" />
+            <End Role="INSTANCE_SET_CONTENTS" EntitySet="INSTANCE_SET_CONTENTS" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище LIBRARYCP_updatedModel1Container" CdmEntityContainer="LIBRARYCP_updatedEntities">
+          <EntitySetMapping Name="AUTHORS">
+            <EntityTypeMapping TypeName="LIBRARYCP_updatedModel1.AUTHORS">
+              <MappingFragment StoreEntitySet="AUTHORS">
+                <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+                <ScalarProperty Name="AuthorName" ColumnName="AuthorName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BOOK_LEND">
+            <EntityTypeMapping TypeName="LIBRARYCP_updatedModel1.BOOK_LEND">
+              <MappingFragment StoreEntitySet="BOOK_LEND">
+                <ScalarProperty Name="BookLendID" ColumnName="BookLendID" />
+                <ScalarProperty Name="ReaderID" ColumnName="ReaderID" />
+                <ScalarProperty Name="InstanceSetID" ColumnName="InstanceSetID" />
+                <ScalarProperty Name="LendDate" ColumnName="LendDate" />
+                <ScalarProperty Name="ExpReturnDate" ColumnName="ExpReturnDate" />
+                <ScalarProperty Name="ActReturnDate" ColumnName="ActReturnDate" />
+                <ScalarProperty Name="Prolongated" ColumnName="Prolongated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BOOKS">
+            <EntityTypeMapping TypeName="LIBRARYCP_updatedModel1.BOOKS">
+              <MappingFragment StoreEntitySet="BOOKS">
+                <ScalarProperty Name="IsWorking" ColumnName="IsWorking" />
+                <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+                <ScalarProperty Name="BookName" ColumnName="BookName" />
+                <ScalarProperty Name="BookAuthor" ColumnName="BookAuthor" />
+                <ScalarProperty Name="Publisher" ColumnName="Publisher" />
+                <ScalarProperty Name="PublDate" ColumnName="PublDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EMPLOYEES">
+            <EntityTypeMapping TypeName="LIBRARYCP_updatedModel1.EMPLOYEES">
+              <MappingFragment StoreEntitySet="EMPLOYEES">
+                <ScalarProperty Name="EPassword" ColumnName="EPassword" />
+                <ScalarProperty Name="ELogin" ColumnName="ELogin" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+                <ScalarProperty Name="EmployeeRole" ColumnName="EmployeeRole" />
+                <ScalarProperty Name="IsWorking" ColumnName="IsWorking" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INSTANCE_SET_CONTENTS">
+            <EntityTypeMapping TypeName="LIBRARYCP_updatedModel1.INSTANCE_SET_CONTENTS">
+              <MappingFragment StoreEntitySet="INSTANCE_SET_CONTENTS">
+                <ScalarProperty Name="InstanceSetContentID" ColumnName="InstanceSetContentID" />
+                <ScalarProperty Name="InstanceSetID" ColumnName="InstanceSetID" />
+                <ScalarProperty Name="InstanceID" ColumnName="InstanceID" />
+                <ScalarProperty Name="ReturnDate" ColumnName="ReturnDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INSTANCE_SETS">
+            <EntityTypeMapping TypeName="LIBRARYCP_updatedModel1.INSTANCE_SETS">
+              <MappingFragment StoreEntitySet="INSTANCE_SETS">
+                <ScalarProperty Name="InstanceSetID" ColumnName="InstanceSetID" />
+                <ScalarProperty Name="InstanceName" ColumnName="InstanceName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INSTANCES">
+            <EntityTypeMapping TypeName="LIBRARYCP_updatedModel1.INSTANCES">
+              <MappingFragment StoreEntitySet="INSTANCES">
+                <ScalarProperty Name="IsWorking" ColumnName="IsWorking" />
+                <ScalarProperty Name="InstanceID" ColumnName="InstanceID" />
+                <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+                <ScalarProperty Name="IsTaken" ColumnName="IsTaken" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PUBLISHERS">
+            <EntityTypeMapping TypeName="LIBRARYCP_updatedModel1.PUBLISHERS">
+              <MappingFragment StoreEntitySet="PUBLISHERS">
+                <ScalarProperty Name="IsWorking" ColumnName="IsWorking" />
+                <ScalarProperty Name="PublisherID" ColumnName="PublisherID" />
+                <ScalarProperty Name="PublisherName" ColumnName="PublisherName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="READERS">
+            <EntityTypeMapping TypeName="LIBRARYCP_updatedModel1.READERS">
+              <MappingFragment StoreEntitySet="READERS">
+                <ScalarProperty Name="IsReading" ColumnName="IsReading" />
+                <ScalarProperty Name="ReaderID" ColumnName="ReaderID" />
+                <ScalarProperty Name="ReaderName" ColumnName="ReaderName" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ROLES">
+            <EntityTypeMapping TypeName="LIBRARYCP_updatedModel1.ROLES">
+              <MappingFragment StoreEntitySet="ROLES">
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

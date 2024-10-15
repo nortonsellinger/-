@@ -1,0 +1,73 @@
+﻿<Page x:Class="LIBRARY_lite.pages.BookLoss"
+	  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	  xmlns:local="clr-namespace:LIBRARY_lite.pages"
+	  mc:Ignorable="d" 
+	  d:DesignHeight="450" d:DesignWidth="800"
+	  Title="BookLoss">
+	<Grid Background="White">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+		<Grid Margin="5">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="auto"/>
+				<ColumnDefinition Width="auto"/>
+				<ColumnDefinition/>
+				<ColumnDefinition Width="auto"/>
+			</Grid.ColumnDefinitions>
+			<TextBlock Grid.Column="0" x:Name="loss_header" FontSize="25" Text="Утеря" Margin="5" VerticalAlignment="Center"/>
+			<TextBlock Grid.Column="1" FontSize="20" Text="Поиск" Margin="20, 5, 5, 5" VerticalAlignment="Center"/>
+			<TextBox Grid.Column="2" FontSize="20" Margin="10, 5" TextChanged="loss_search" VerticalAlignment="Center"/>
+			<StackPanel Grid.Column="3" Orientation="Horizontal">
+				<Button FontSize="20" Content="дата:" Padding="10, 5" Margin="10,5"
+					Click="date_search" VerticalAlignment="Center"/>
+				<TextBlock FontSize="20" Text="с" Margin="5" VerticalAlignment="Center"/>
+				<TextBox x:Name="date_start" FontSize="20" Padding="5" Margin="5" MaxLength="10"
+					VerticalAlignment="Center" MinWidth="100" PreviewTextInput="date_check" PreviewKeyDown="space_check"/>
+				<TextBlock FontSize="20" Text="по" Margin="5" VerticalAlignment="Center"/>
+				<TextBox x:Name="date_end" FontSize="20" Padding="5" Margin="5" MaxLength="10"
+					VerticalAlignment="Center" MinWidth="100" PreviewTextInput="date_check" PreviewKeyDown="space_check"/>
+                <Button FontSize="20" Content="за все время" Padding="10, 5" Margin="10,5"
+					Click="alltime" VerticalAlignment="Center"/>
+            </StackPanel>
+		</Grid>
+		<DataGrid x:Name="BookLossDG" Grid.Row="1" AutoGenerateColumns="False" FontSize="20" IsReadOnly="True"
+			ScrollViewer.CanContentScroll="False">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="Читатель" Width="2*" MinWidth="150" Binding="{Binding READERS.ReaderName}"/>
+				<DataGridTextColumn Header="Дата утери" Width="1*" MinWidth="130" Binding="{Binding LossDate,StringFormat=dd.MM.yyyy}"/>
+				<DataGridTemplateColumn Header="Книга" Width="4*" MinWidth="250">
+					<DataGridTemplateColumn.CellTemplate>
+						<DataTemplate>
+							<WrapPanel Orientation="Horizontal">
+								<TextBlock Text="{Binding BOOKS.ISBN}" Margin="10, 5"/>
+								<TextBlock Text="{Binding BOOKS.BookName}" TextWrapping="Wrap" Margin="10, 5"/>
+								<TextBlock Text="{Binding BOOKS.AUTHORS.AuthorName}" TextWrapping="Wrap" Margin="10, 5"/>
+								<TextBlock Text="{Binding BOOKS.PUBLISHERS.PublisherName}" TextWrapping="Wrap" Margin="10, 5"/>
+								<TextBlock Text="{Binding BOOKS.PublDate}" Margin="10, 5"/>
+							</WrapPanel>
+						</DataTemplate>
+					</DataGridTemplateColumn.CellTemplate>
+				</DataGridTemplateColumn>
+				<DataGridTextColumn Header="Библиотекарь" Width="2*" MinWidth="200" Binding="{Binding EMPLOYEES.EmployeeName}">
+					<DataGridTextColumn.ElementStyle>
+						<Style>
+							<Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
+						</Style>
+					</DataGridTextColumn.ElementStyle>
+				</DataGridTextColumn>
+                <!--<DataGridTemplateColumn Width="1*" MinWidth="100">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Выдача"/> --><!--Click="show_booklend"--><!--
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>-->
+			</DataGrid.Columns>
+		</DataGrid>
+	</Grid>
+</Page>

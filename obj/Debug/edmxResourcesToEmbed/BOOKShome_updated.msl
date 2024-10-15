@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище LIBRARYCP_updatedModel1Container" CdmEntityContainer="LIBRARYCP_updatedEntities">
+    <EntitySetMapping Name="AUTHORS">
+      <EntityTypeMapping TypeName="LIBRARYCP_updatedModel1.AUTHORS">
+        <MappingFragment StoreEntitySet="AUTHORS">
+          <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+          <ScalarProperty Name="AuthorName" ColumnName="AuthorName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BOOK_LEND">
+      <EntityTypeMapping TypeName="LIBRARYCP_updatedModel1.BOOK_LEND">
+        <MappingFragment StoreEntitySet="BOOK_LEND">
+          <ScalarProperty Name="BookLendID" ColumnName="BookLendID" />
+          <ScalarProperty Name="ReaderID" ColumnName="ReaderID" />
+          <ScalarProperty Name="InstanceSetID" ColumnName="InstanceSetID" />
+          <ScalarProperty Name="LendDate" ColumnName="LendDate" />
+          <ScalarProperty Name="ExpReturnDate" ColumnName="ExpReturnDate" />
+          <ScalarProperty Name="ActReturnDate" ColumnName="ActReturnDate" />
+          <ScalarProperty Name="Prolongated" ColumnName="Prolongated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BOOKS">
+      <EntityTypeMapping TypeName="LIBRARYCP_updatedModel1.BOOKS">
+        <MappingFragment StoreEntitySet="BOOKS">
+          <ScalarProperty Name="IsWorking" ColumnName="IsWorking" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="BookName" ColumnName="BookName" />
+          <ScalarProperty Name="BookAuthor" ColumnName="BookAuthor" />
+          <ScalarProperty Name="Publisher" ColumnName="Publisher" />
+          <ScalarProperty Name="PublDate" ColumnName="PublDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPLOYEES">
+      <EntityTypeMapping TypeName="LIBRARYCP_updatedModel1.EMPLOYEES">
+        <MappingFragment StoreEntitySet="EMPLOYEES">
+          <ScalarProperty Name="EPassword" ColumnName="EPassword" />
+          <ScalarProperty Name="ELogin" ColumnName="ELogin" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmployeeRole" ColumnName="EmployeeRole" />
+          <ScalarProperty Name="IsWorking" ColumnName="IsWorking" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INSTANCE_SET_CONTENTS">
+      <EntityTypeMapping TypeName="LIBRARYCP_updatedModel1.INSTANCE_SET_CONTENTS">
+        <MappingFragment StoreEntitySet="INSTANCE_SET_CONTENTS">
+          <ScalarProperty Name="InstanceSetContentID" ColumnName="InstanceSetContentID" />
+          <ScalarProperty Name="InstanceSetID" ColumnName="InstanceSetID" />
+          <ScalarProperty Name="InstanceID" ColumnName="InstanceID" />
+          <ScalarProperty Name="ReturnDate" ColumnName="ReturnDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INSTANCE_SETS">
+      <EntityTypeMapping TypeName="LIBRARYCP_updatedModel1.INSTANCE_SETS">
+        <MappingFragment StoreEntitySet="INSTANCE_SETS">
+          <ScalarProperty Name="InstanceSetID" ColumnName="InstanceSetID" />
+          <ScalarProperty Name="InstanceName" ColumnName="InstanceName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INSTANCES">
+      <EntityTypeMapping TypeName="LIBRARYCP_updatedModel1.INSTANCES">
+        <MappingFragment StoreEntitySet="INSTANCES">
+          <ScalarProperty Name="IsWorking" ColumnName="IsWorking" />
+          <ScalarProperty Name="InstanceID" ColumnName="InstanceID" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="IsTaken" ColumnName="IsTaken" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PUBLISHERS">
+      <EntityTypeMapping TypeName="LIBRARYCP_updatedModel1.PUBLISHERS">
+        <MappingFragment StoreEntitySet="PUBLISHERS">
+          <ScalarProperty Name="IsWorking" ColumnName="IsWorking" />
+          <ScalarProperty Name="PublisherID" ColumnName="PublisherID" />
+          <ScalarProperty Name="PublisherName" ColumnName="PublisherName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="READERS">
+      <EntityTypeMapping TypeName="LIBRARYCP_updatedModel1.READERS">
+        <MappingFragment StoreEntitySet="READERS">
+          <ScalarProperty Name="IsReading" ColumnName="IsReading" />
+          <ScalarProperty Name="ReaderID" ColumnName="ReaderID" />
+          <ScalarProperty Name="ReaderName" ColumnName="ReaderName" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROLES">
+      <EntityTypeMapping TypeName="LIBRARYCP_updatedModel1.ROLES">
+        <MappingFragment StoreEntitySet="ROLES">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

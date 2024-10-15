@@ -1,0 +1,12 @@
+﻿<Window x:Class="LIBRARY_lite.server_search"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LIBRARY_lite"
+        mc:Ignorable="d"
+        Title="server_search" Height="450" Width="800" Loaded="search">
+    <Grid>
+        <TextBlock x:Name="list" FontSize="20" Margin="10" TextWrapping="Wrap"/>
+    </Grid>
+</Window>

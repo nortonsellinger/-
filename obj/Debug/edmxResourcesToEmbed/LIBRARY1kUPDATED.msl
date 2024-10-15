@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище libraryModelContainer" CdmEntityContainer="libraryEntities">
+    <EntitySetMapping Name="AUTHORS">
+      <EntityTypeMapping TypeName="libraryModel.AUTHORS">
+        <MappingFragment StoreEntitySet="AUTHORS">
+          <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+          <ScalarProperty Name="AuthorName" ColumnName="AuthorName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BOOK_SET_CONTENTS">
+      <EntityTypeMapping TypeName="libraryModel.BOOK_SET_CONTENTS">
+        <MappingFragment StoreEntitySet="BOOK_SET_CONTENTS">
+          <ScalarProperty Name="BookSetContentID" ColumnName="BookSetContentID" />
+          <ScalarProperty Name="BookSetID" ColumnName="BookSetID" />
+          <ScalarProperty Name="BookID" ColumnName="BookID" />
+          <ScalarProperty Name="ReturnDate" ColumnName="ReturnDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BOOK_SETS">
+      <EntityTypeMapping TypeName="libraryModel.BOOK_SETS">
+        <MappingFragment StoreEntitySet="BOOK_SETS">
+          <ScalarProperty Name="BookSetID" ColumnName="BookSetID" />
+          <ScalarProperty Name="BookSetName" ColumnName="BookSetName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BOOKLEND">
+      <EntityTypeMapping TypeName="libraryModel.BOOKLEND">
+        <MappingFragment StoreEntitySet="BOOKLEND">
+          <ScalarProperty Name="BookLendID" ColumnName="BookLendID" />
+          <ScalarProperty Name="ReaderID" ColumnName="ReaderID" />
+          <ScalarProperty Name="BookSetID" ColumnName="BookSetID" />
+          <ScalarProperty Name="LendDate" ColumnName="LendDate" />
+          <ScalarProperty Name="ExpReturnDate" ColumnName="ExpReturnDate" />
+          <ScalarProperty Name="ActualReturnDate" ColumnName="ActualReturnDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BOOKS">
+      <EntityTypeMapping TypeName="libraryModel.BOOKS">
+        <MappingFragment StoreEntitySet="BOOKS">
+          <ScalarProperty Name="BookID" ColumnName="BookID" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="BookName" ColumnName="BookName" />
+          <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+          <ScalarProperty Name="PublisherID" ColumnName="PublisherID" />
+          <ScalarProperty Name="PublDate" ColumnName="PublDate" />
+          <ScalarProperty Name="IsTaken" ColumnName="IsTaken" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPLOYEES">
+      <EntityTypeMapping TypeName="libraryModel.EMPLOYEES">
+        <MappingFragment StoreEntitySet="EMPLOYEES">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="IsWorking" ColumnName="IsWorking" />
+          <ScalarProperty Name="ELogin" ColumnName="ELogin" />
+          <ScalarProperty Name="EPassword" ColumnName="EPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOST_BOOKS">
+      <EntityTypeMapping TypeName="libraryModel.LOST_BOOKS">
+        <MappingFragment StoreEntitySet="LOST_BOOKS">
+          <ScalarProperty Name="LostBookID" ColumnName="LostBookID" />
+          <ScalarProperty Name="ReaderID" ColumnName="ReaderID" />
+          <ScalarProperty Name="BookID" ColumnName="BookID" />
+          <ScalarProperty Name="LossDate" ColumnName="LossDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PUBLISHERS">
+      <EntityTypeMapping TypeName="libraryModel.PUBLISHERS">
+        <MappingFragment StoreEntitySet="PUBLISHERS">
+          <ScalarProperty Name="PublisherID" ColumnName="PublisherID" />
+          <ScalarProperty Name="PublisherName" ColumnName="PublisherName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="READERS">
+      <EntityTypeMapping TypeName="libraryModel.READERS">
+        <MappingFragment StoreEntitySet="READERS">
+          <ScalarProperty Name="ReaderID" ColumnName="ReaderID" />
+          <ScalarProperty Name="ReaderName" ColumnName="ReaderName" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="IsReading" ColumnName="IsReading" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROLES">
+      <EntityTypeMapping TypeName="libraryModel.ROLES">
+        <MappingFragment StoreEntitySet="ROLES">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

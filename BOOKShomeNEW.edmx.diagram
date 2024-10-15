@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="74b3caa0a5be43a3a4c22e6d1bf0f311" Name="Diagram1" ZoomLevel="97">
+        <EntityTypeShape EntityType="libModel.AUTHORS" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="libModel.BOOK_SET_CONTENTS" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="libModel.BOOK_SETS" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="libModel.BOOKLEND" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="libModel.BOOKS" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="libModel.EMPLOYEES" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="libModel.PUBLISHERS" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="libModel.READERS" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="libModel.ROLES" Width="1.5" PointX="7.75" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="libModel.FK__BOOKS__AuthorID__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="libModel.FK__BOOK_SET___BookI__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="libModel.FK__BOOK_SET___BookS__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="libModel.FK__BOOKLEND__BookSe__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="libModel.FK__BOOKLEND__Reader__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="libModel.FK__BOOKS__Publisher__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="libModel.FK__EMPLOYEES__RoleI__398D8EEE" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

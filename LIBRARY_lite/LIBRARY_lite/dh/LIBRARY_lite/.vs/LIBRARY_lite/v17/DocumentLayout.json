@@ -1,0 +1,222 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|c:\\users\\is\\desktop\\\u0430\u043D\u043E\u0445\u0438\u043D\u0430\\wpf\\library_lite\\dh\\library_lite\\windows\\addbook.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:windows\\addbook.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\windows\\addbook.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:windows\\addbook.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\pages\\books.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:pages\\books.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\pages\\books.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:pages\\books.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\windows\\addreader.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:windows\\addreader.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\pages\\readers.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:pages\\readers.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\windows\\bookwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:windows\\bookwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\pages\\employees.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:pages\\employees.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\windows\\bookwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:windows\\bookwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\windows\\addreader.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:windows\\addreader.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F8B0A97D-8E19-4347-9DD5-63788B74FB21}|LIBRARY_lite.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddBook.xaml",
+              "DocumentMoniker": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\windows\\AddBook.xaml",
+              "RelativeDocumentMoniker": "windows\\AddBook.xaml",
+              "ToolTip": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\windows\\AddBook.xaml",
+              "RelativeToolTip": "windows\\AddBook.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-11T01:02:17.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Employees.xaml",
+              "DocumentMoniker": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\pages\\Employees.xaml",
+              "RelativeDocumentMoniker": "pages\\Employees.xaml",
+              "ToolTip": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\pages\\Employees.xaml",
+              "RelativeToolTip": "pages\\Employees.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-10T13:44:15.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Books.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\pages\\Books.xaml.cs",
+              "RelativeDocumentMoniker": "pages\\Books.xaml.cs",
+              "ToolTip": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\pages\\Books.xaml.cs",
+              "RelativeToolTip": "pages\\Books.xaml.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAACMAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T13:43:23.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Books.xaml",
+              "DocumentMoniker": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\pages\\Books.xaml",
+              "RelativeDocumentMoniker": "pages\\Books.xaml",
+              "ToolTip": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\pages\\Books.xaml",
+              "RelativeToolTip": "pages\\Books.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-10T13:43:18.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BOOKwindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\windows\\BOOKwindow.xaml.cs",
+              "RelativeDocumentMoniker": "windows\\BOOKwindow.xaml.cs",
+              "ToolTip": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\windows\\BOOKwindow.xaml.cs",
+              "RelativeToolTip": "windows\\BOOKwindow.xaml.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAgwC8AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T13:37:26.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AddReader.xaml",
+              "DocumentMoniker": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\windows\\AddReader.xaml",
+              "RelativeDocumentMoniker": "windows\\AddReader.xaml",
+              "ToolTip": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\windows\\AddReader.xaml",
+              "RelativeToolTip": "windows\\AddReader.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-10T12:55:52.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AddReader.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\windows\\AddReader.xaml.cs",
+              "RelativeDocumentMoniker": "windows\\AddReader.xaml.cs",
+              "ToolTip": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\windows\\AddReader.xaml.cs",
+              "RelativeToolTip": "windows\\AddReader.xaml.cs",
+              "ViewState": "AQIAAEsAAAAAAAAAAAA5wGQAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T12:55:49.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABTAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T12:55:19.113Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddBook.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\windows\\AddBook.xaml.cs",
+              "RelativeDocumentMoniker": "windows\\AddBook.xaml.cs",
+              "ToolTip": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\windows\\AddBook.xaml.cs",
+              "RelativeToolTip": "windows\\AddBook.xaml.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAmwC8AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T01:49:39.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Readers.xaml",
+              "DocumentMoniker": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\pages\\Readers.xaml",
+              "RelativeDocumentMoniker": "pages\\Readers.xaml",
+              "ToolTip": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\pages\\Readers.xaml",
+              "RelativeToolTip": "pages\\Readers.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-11T00:55:56.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BOOKS.cs",
+              "DocumentMoniker": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\BOOKS.cs",
+              "RelativeDocumentMoniker": "BOOKS.cs",
+              "ToolTip": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\BOOKS.cs",
+              "RelativeToolTip": "BOOKS.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAcwC0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T01:47:34.637Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BOOKwindow.xaml",
+              "DocumentMoniker": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\windows\\BOOKwindow.xaml",
+              "RelativeDocumentMoniker": "windows\\BOOKwindow.xaml",
+              "ToolTip": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\windows\\BOOKwindow.xaml",
+              "RelativeToolTip": "windows\\BOOKwindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-06T14:10:49.231Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Users\\is\\Desktop\\\u0410\u043D\u043E\u0445\u0438\u043D\u0430\\WPF\\LIBRARY_lite\\dh\\LIBRARY_lite\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-06T08:29:21.441Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

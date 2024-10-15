@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d1b6f7e0fbae4203a7a8d92d19614d54" Name="Diagram1" ZoomLevel="83">
+        <EntityTypeShape EntityType="lib3Model.AUTHORS" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="lib3Model.BOOK_SET_CONTENTS" Width="2" PointX="5.625" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="lib3Model.BOOK_SETS" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="lib3Model.BOOKLEND" Width="1.5" PointX="8.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="lib3Model.BOOKS" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="lib3Model.EMPLOYEES" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="lib3Model.LOST_BOOKS" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="lib3Model.PUBLISHERS" Width="1.5" PointX="0.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="lib3Model.READERS" Width="1.5" PointX="3" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="lib3Model.ROLES" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <AssociationConnector Association="lib3Model.FK__BOOKS__AuthorID__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="lib3Model.FK__BOOK_SET___BookI__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="lib3Model.FK__BOOK_SET___BookS__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="lib3Model.FK__BOOK_SET___Emplo__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="lib3Model.FK__BOOKLEND__BookSe__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="lib3Model.FK__BOOKLEND__Employ__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="lib3Model.FK__BOOKLEND__Reader__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="lib3Model.FK__BOOKS__Publisher__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="lib3Model.FK__LOST_BOOK__BookI__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="lib3Model.FK__EMPLOYEES__RoleI__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="lib3Model.FK__LOST_BOOK__Emplo__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="lib3Model.FK__LOST_BOOK__Reade__5165187F" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="lib3Model.info" Width="1.5" PointX="7.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

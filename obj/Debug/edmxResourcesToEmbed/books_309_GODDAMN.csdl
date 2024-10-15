@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="lib4Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AUTHORS">
+    <Key>
+      <PropertyRef Name="AuthorID" />
+    </Key>
+    <Property Name="AuthorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AuthorName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="BOOKS" Relationship="Self.FK__BOOKS__AuthorID__1B0907CE" FromRole="AUTHORS" ToRole="BOOKS" />
+  </EntityType>
+  <EntityType Name="BOOK_SET_CONTENTS">
+    <Key>
+      <PropertyRef Name="BookSetContentID" />
+    </Key>
+    <Property Name="BookSetContentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BookSetID" Type="Int32" Nullable="false" />
+    <Property Name="BookID" Type="Int32" Nullable="false" />
+    <Property Name="ReturnDate" Type="DateTime" Precision="3" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="IsLost" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="BOOKS" Relationship="Self.FK__BOOK_SET___BookI__21B6055D" FromRole="BOOK_SET_CONTENTS" ToRole="BOOKS" />
+    <NavigationProperty Name="BOOK_SETS" Relationship="Self.FK__BOOK_SET___BookS__20C1E124" FromRole="BOOK_SET_CONTENTS" ToRole="BOOK_SETS" />
+    <NavigationProperty Name="EMPLOYEES" Relationship="Self.FK__BOOK_SET___Emplo__22AA2996" FromRole="BOOK_SET_CONTENTS" ToRole="EMPLOYEES" />
+  </EntityType>
+  <EntityType Name="BOOK_SETS">
+    <Key>
+      <PropertyRef Name="BookSetID" />
+    </Key>
+    <Property Name="BookSetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BookSetName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="BOOK_SET_CONTENTS" Relationship="Self.FK__BOOK_SET___BookS__20C1E124" FromRole="BOOK_SETS" ToRole="BOOK_SET_CONTENTS" />
+    <NavigationProperty Name="BOOKLEND" Relationship="Self.FK__BOOKLEND__BookSe__267ABA7A" FromRole="BOOK_SETS" ToRole="BOOKLEND" />
+  </EntityType>
+  <EntityType Name="BOOKLEND">
+    <Key>
+      <PropertyRef Name="BookLendID" />
+    </Key>
+    <Property Name="BookLendID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReaderID" Type="Int32" Nullable="false" />
+    <Property Name="BookSetID" Type="Int32" Nullable="false" />
+    <Property Name="LendDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ExpReturnDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ActualReturnDate" Type="DateTime" Precision="3" />
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="BOOK_SETS" Relationship="Self.FK__BOOKLEND__BookSe__267ABA7A" FromRole="BOOKLEND" ToRole="BOOK_SETS" />
+    <NavigationProperty Name="EMPLOYEES" Relationship="Self.FK__BOOKLEND__Employ__276EDEB3" FromRole="BOOKLEND" ToRole="EMPLOYEES" />
+    <NavigationProperty Name="READERS" Relationship="Self.FK__BOOKLEND__Reader__25869641" FromRole="BOOKLEND" ToRole="READERS" />
+    <NavigationProperty Name="LOST_BOOKS" Relationship="Self.FK__LOST_BOOK__BookL__2D27B809" FromRole="BOOKLEND" ToRole="LOST_BOOKS" />
+  </EntityType>
+  <EntityType Name="BOOKS">
+    <Key>
+      <PropertyRef Name="BookID" />
+    </Key>
+    <Property Name="BookID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ISBN" Type="String" MaxLength="13" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BookName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AuthorID" Type="Int32" Nullable="false" />
+    <Property Name="PublisherID" Type="Int32" Nullable="false" />
+    <Property Name="PublDate" Type="Int32" Nullable="false" />
+    <Property Name="IsTaken" Type="Boolean" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AUTHORS" Relationship="Self.FK__BOOKS__AuthorID__1B0907CE" FromRole="BOOKS" ToRole="AUTHORS" />
+    <NavigationProperty Name="BOOK_SET_CONTENTS" Relationship="Self.FK__BOOK_SET___BookI__21B6055D" FromRole="BOOKS" ToRole="BOOK_SET_CONTENTS" />
+    <NavigationProperty Name="PUBLISHERS" Relationship="Self.FK__BOOKS__Publisher__1BFD2C07" FromRole="BOOKS" ToRole="PUBLISHERS" />
+    <NavigationProperty Name="LOST_BOOKS" Relationship="Self.FK__LOST_BOOK__BookI__2B3F6F97" FromRole="BOOKS" ToRole="LOST_BOOKS" />
+  </EntityType>
+  <EntityType Name="EMPLOYEES">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <Property Name="IsWorking" Type="Boolean" Nullable="false" />
+    <Property Name="ELogin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EPassword" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="BOOK_SET_CONTENTS" Relationship="Self.FK__BOOK_SET___Emplo__22AA2996" FromRole="EMPLOYEES" ToRole="BOOK_SET_CONTENTS" />
+    <NavigationProperty Name="BOOKLEND" Relationship="Self.FK__BOOKLEND__Employ__276EDEB3" FromRole="EMPLOYEES" ToRole="BOOKLEND" />
+    <NavigationProperty Name="ROLES" Relationship="Self.FK__EMPLOYEES__RoleI__1273C1CD" FromRole="EMPLOYEES" ToRole="ROLES" />
+    <NavigationProperty Name="LOST_BOOKS" Relationship="Self.FK__LOST_BOOK__Emplo__2C3393D0" FromRole="EMPLOYEES" ToRole="LOST_BOOKS" />
+  </EntityType>
+  <EntityType Name="LOST_BOOKS">
+    <Key>
+      <PropertyRef Name="LostBookID" />
+    </Key>
+    <Property Name="LostBookID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReaderID" Type="Int32" Nullable="false" />
+    <Property Name="BookID" Type="Int32" Nullable="false" />
+    <Property Name="LossDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <Property Name="BookLendID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="BOOKLEND" Relationship="Self.FK__LOST_BOOK__BookL__2D27B809" FromRole="LOST_BOOKS" ToRole="BOOKLEND" />
+    <NavigationProperty Name="BOOKS" Relationship="Self.FK__LOST_BOOK__BookI__2B3F6F97" FromRole="LOST_BOOKS" ToRole="BOOKS" />
+    <NavigationProperty Name="EMPLOYEES" Relationship="Self.FK__LOST_BOOK__Emplo__2C3393D0" FromRole="LOST_BOOKS" ToRole="EMPLOYEES" />
+    <NavigationProperty Name="READERS" Relationship="Self.FK__LOST_BOOK__Reade__2A4B4B5E" FromRole="LOST_BOOKS" ToRole="READERS" />
+  </EntityType>
+  <EntityType Name="PUBLISHERS">
+    <Key>
+      <PropertyRef Name="PublisherID" />
+    </Key>
+    <Property Name="PublisherID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PublisherName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="BOOKS" Relationship="Self.FK__BOOKS__Publisher__1BFD2C07" FromRole="PUBLISHERS" ToRole="BOOKS" />
+  </EntityType>
+  <EntityType Name="READERS">
+    <Key>
+      <PropertyRef Name="ReaderID" />
+    </Key>
+    <Property Name="ReaderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReaderName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BirthDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsReading" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="BOOKLEND" Relationship="Self.FK__BOOKLEND__Reader__25869641" FromRole="READERS" ToRole="BOOKLEND" />
+    <NavigationProperty Name="LOST_BOOKS" Relationship="Self.FK__LOST_BOOK__Reade__2A4B4B5E" FromRole="READERS" ToRole="LOST_BOOKS" />
+  </EntityType>
+  <EntityType Name="ROLES">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="EMPLOYEES" Relationship="Self.FK__EMPLOYEES__RoleI__1273C1CD" FromRole="ROLES" ToRole="EMPLOYEES" />
+  </EntityType>
+  <Association Name="FK__BOOKS__AuthorID__1B0907CE">
+    <End Role="AUTHORS" Type="Self.AUTHORS" Multiplicity="1" />
+    <End Role="BOOKS" Type="Self.BOOKS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AUTHORS">
+        <PropertyRef Name="AuthorID" />
+      </Principal>
+      <Dependent Role="BOOKS">
+        <PropertyRef Name="AuthorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BOOK_SET___BookI__21B6055D">
+    <End Role="BOOKS" Type="Self.BOOKS" Multiplicity="1" />
+    <End Role="BOOK_SET_CONTENTS" Type="Self.BOOK_SET_CONTENTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BOOKS">
+        <PropertyRef Name="BookID" />
+      </Principal>
+      <Dependent Role="BOOK_SET_CONTENTS">
+        <PropertyRef Name="BookID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BOOK_SET___BookS__20C1E124">
+    <End Role="BOOK_SETS" Type="Self.BOOK_SETS" Multiplicity="1" />
+    <End Role="BOOK_SET_CONTENTS" Type="Self.BOOK_SET_CONTENTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BOOK_SETS">
+        <PropertyRef Name="BookSetID" />
+      </Principal>
+      <Dependent Role="BOOK_SET_CONTENTS">
+        <PropertyRef Name="BookSetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BOOK_SET___Emplo__22AA2996">
+    <End Role="EMPLOYEES" Type="Self.EMPLOYEES" Multiplicity="0..1" />
+    <End Role="BOOK_SET_CONTENTS" Type="Self.BOOK_SET_CONTENTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLOYEES">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="BOOK_SET_CONTENTS">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BOOKLEND__BookSe__267ABA7A">
+    <End Role="BOOK_SETS" Type="Self.BOOK_SETS" Multiplicity="1" />
+    <End Role="BOOKLEND" Type="Self.BOOKLEND" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BOOK_SETS">
+        <PropertyRef Name="BookSetID" />
+      </Principal>
+      <Dependent Role="BOOKLEND">
+        <PropertyRef Name="BookSetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BOOKLEND__Employ__276EDEB3">
+    <End Role="EMPLOYEES" Type="Self.EMPLOYEES" Multiplicity="1" />
+    <End Role="BOOKLEND" Type="Self.BOOKLEND" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLOYEES">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="BOOKLEND">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BOOKLEND__Reader__25869641">
+    <End Role="READERS" Type="Self.READERS" Multiplicity="1" />
+    <End Role="BOOKLEND" Type="Self.BOOKLEND" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="READERS">
+        <PropertyRef Name="ReaderID" />
+      </Principal>
+      <Dependent Role="BOOKLEND">
+        <PropertyRef Name="ReaderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LOST_BOOK__BookL__2D27B809">
+    <End Role="BOOKLEND" Type="Self.BOOKLEND" Multiplicity="1" />
+    <End Role="LOST_BOOKS" Type="Self.LOST_BOOKS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BOOKLEND">
+        <PropertyRef Name="BookLendID" />
+      </Principal>
+      <Dependent Role="LOST_BOOKS">
+        <PropertyRef Name="BookLendID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BOOKS__Publisher__1BFD2C07">
+    <End Role="PUBLISHERS" Type="Self.PUBLISHERS" Multiplicity="1" />
+    <End Role="BOOKS" Type="Self.BOOKS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PUBLISHERS">
+        <PropertyRef Name="PublisherID" />
+      </Principal>
+      <Dependent Role="BOOKS">
+        <PropertyRef Name="PublisherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LOST_BOOK__BookI__2B3F6F97">
+    <End Role="BOOKS" Type="Self.BOOKS" Multiplicity="1" />
+    <End Role="LOST_BOOKS" Type="Self.LOST_BOOKS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BOOKS">
+        <PropertyRef Name="BookID" />
+      </Principal>
+      <Dependent Role="LOST_BOOKS">
+        <PropertyRef Name="BookID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__EMPLOYEES__RoleI__1273C1CD">
+    <End Role="ROLES" Type="Self.ROLES" Multiplicity="1" />
+    <End Role="EMPLOYEES" Type="Self.EMPLOYEES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROLES">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="EMPLOYEES">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LOST_BOOK__Emplo__2C3393D0">
+    <End Role="EMPLOYEES" Type="Self.EMPLOYEES" Multiplicity="1" />
+    <End Role="LOST_BOOKS" Type="Self.LOST_BOOKS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLOYEES">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="LOST_BOOKS">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LOST_BOOK__Reade__2A4B4B5E">
+    <End Role="READERS" Type="Self.READERS" Multiplicity="1" />
+    <End Role="LOST_BOOKS" Type="Self.LOST_BOOKS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="READERS">
+        <PropertyRef Name="ReaderID" />
+      </Principal>
+      <Dependent Role="LOST_BOOKS">
+        <PropertyRef Name="ReaderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="lib4Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AUTHORS" EntityType="Self.AUTHORS" />
+    <EntitySet Name="BOOK_SET_CONTENTS" EntityType="Self.BOOK_SET_CONTENTS" />
+    <EntitySet Name="BOOK_SETS" EntityType="Self.BOOK_SETS" />
+    <EntitySet Name="BOOKLEND" EntityType="Self.BOOKLEND" />
+    <EntitySet Name="BOOKS" EntityType="Self.BOOKS" />
+    <EntitySet Name="EMPLOYEES" EntityType="Self.EMPLOYEES" />
+    <EntitySet Name="LOST_BOOKS" EntityType="Self.LOST_BOOKS" />
+    <EntitySet Name="PUBLISHERS" EntityType="Self.PUBLISHERS" />
+    <EntitySet Name="READERS" EntityType="Self.READERS" />
+    <EntitySet Name="ROLES" EntityType="Self.ROLES" />
+    <AssociationSet Name="FK__BOOKS__AuthorID__1B0907CE" Association="Self.FK__BOOKS__AuthorID__1B0907CE">
+      <End Role="AUTHORS" EntitySet="AUTHORS" />
+      <End Role="BOOKS" EntitySet="BOOKS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BOOK_SET___BookI__21B6055D" Association="Self.FK__BOOK_SET___BookI__21B6055D">
+      <End Role="BOOKS" EntitySet="BOOKS" />
+      <End Role="BOOK_SET_CONTENTS" EntitySet="BOOK_SET_CONTENTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BOOK_SET___BookS__20C1E124" Association="Self.FK__BOOK_SET___BookS__20C1E124">
+      <End Role="BOOK_SETS" EntitySet="BOOK_SETS" />
+      <End Role="BOOK_SET_CONTENTS" EntitySet="BOOK_SET_CONTENTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BOOK_SET___Emplo__22AA2996" Association="Self.FK__BOOK_SET___Emplo__22AA2996">
+      <End Role="EMPLOYEES" EntitySet="EMPLOYEES" />
+      <End Role="BOOK_SET_CONTENTS" EntitySet="BOOK_SET_CONTENTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BOOKLEND__BookSe__267ABA7A" Association="Self.FK__BOOKLEND__BookSe__267ABA7A">
+      <End Role="BOOK_SETS" EntitySet="BOOK_SETS" />
+      <End Role="BOOKLEND" EntitySet="BOOKLEND" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BOOKLEND__Employ__276EDEB3" Association="Self.FK__BOOKLEND__Employ__276EDEB3">
+      <End Role="EMPLOYEES" EntitySet="EMPLOYEES" />
+      <End Role="BOOKLEND" EntitySet="BOOKLEND" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BOOKLEND__Reader__25869641" Association="Self.FK__BOOKLEND__Reader__25869641">
+      <End Role="READERS" EntitySet="READERS" />
+      <End Role="BOOKLEND" EntitySet="BOOKLEND" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LOST_BOOK__BookL__2D27B809" Association="Self.FK__LOST_BOOK__BookL__2D27B809">
+      <End Role="BOOKLEND" EntitySet="BOOKLEND" />
+      <End Role="LOST_BOOKS" EntitySet="LOST_BOOKS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BOOKS__Publisher__1BFD2C07" Association="Self.FK__BOOKS__Publisher__1BFD2C07">
+      <End Role="PUBLISHERS" EntitySet="PUBLISHERS" />
+      <End Role="BOOKS" EntitySet="BOOKS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LOST_BOOK__BookI__2B3F6F97" Association="Self.FK__LOST_BOOK__BookI__2B3F6F97">
+      <End Role="BOOKS" EntitySet="BOOKS" />
+      <End Role="LOST_BOOKS" EntitySet="LOST_BOOKS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__EMPLOYEES__RoleI__1273C1CD" Association="Self.FK__EMPLOYEES__RoleI__1273C1CD">
+      <End Role="ROLES" EntitySet="ROLES" />
+      <End Role="EMPLOYEES" EntitySet="EMPLOYEES" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LOST_BOOK__Emplo__2C3393D0" Association="Self.FK__LOST_BOOK__Emplo__2C3393D0">
+      <End Role="EMPLOYEES" EntitySet="EMPLOYEES" />
+      <End Role="LOST_BOOKS" EntitySet="LOST_BOOKS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LOST_BOOK__Reade__2A4B4B5E" Association="Self.FK__LOST_BOOK__Reade__2A4B4B5E">
+      <End Role="READERS" EntitySet="READERS" />
+      <End Role="LOST_BOOKS" EntitySet="LOST_BOOKS" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

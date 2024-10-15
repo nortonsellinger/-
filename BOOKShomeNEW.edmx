@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище libModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AUTHORS">
+          <Key>
+            <PropertyRef Name="AuthorID" />
+          </Key>
+          <Property Name="AuthorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AuthorName" Type="nvarchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BOOK_SET_CONTENTS">
+          <Key>
+            <PropertyRef Name="BookSetContentID" />
+          </Key>
+          <Property Name="BookSetContentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BookSetID" Type="int" Nullable="false" />
+          <Property Name="BookID" Type="int" Nullable="false" />
+          <Property Name="ReturnDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="BOOK_SETS">
+          <Key>
+            <PropertyRef Name="BookSetID" />
+          </Key>
+          <Property Name="BookSetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BookSetName" Type="nvarchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BOOKLEND">
+          <Key>
+            <PropertyRef Name="BookLendID" />
+          </Key>
+          <Property Name="BookLendID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ReaderID" Type="int" Nullable="false" />
+          <Property Name="BookSetID" Type="int" Nullable="false" />
+          <Property Name="LendDate" Type="datetime" Nullable="false" />
+          <Property Name="ExpreturnDate" Type="datetime" Nullable="false" />
+          <Property Name="ActualReturnDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="BOOKS">
+          <Key>
+            <PropertyRef Name="BookID" />
+          </Key>
+          <Property Name="BookID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ISBN" Type="nvarchar" MaxLength="13" Nullable="false" />
+          <Property Name="BookName" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="AuthorID" Type="int" Nullable="false" />
+          <Property Name="PublisherID" Type="int" Nullable="false" />
+          <Property Name="PublDate" Type="int" Nullable="false" />
+          <Property Name="IsTaken" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EMPLOYEES">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="IsWorking" Type="bit" Nullable="false" />
+          <Property Name="ELogin" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="EPassword" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PUBLISHERS">
+          <Key>
+            <PropertyRef Name="PublisherID" />
+          </Key>
+          <Property Name="PublisherID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PublisherName" Type="nvarchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <EntityType Name="READERS">
+          <Key>
+            <PropertyRef Name="ReaderID" />
+          </Key>
+          <Property Name="ReaderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ReaderName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="BirthDate" Type="datetime" Nullable="false" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="IsReading" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ROLES">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__BOOK_SET___BookI__48CFD27E">
+          <End Role="BOOKS" Type="Self.BOOKS" Multiplicity="1" />
+          <End Role="BOOK_SET_CONTENTS" Type="Self.BOOK_SET_CONTENTS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOOKS">
+              <PropertyRef Name="BookID" />
+            </Principal>
+            <Dependent Role="BOOK_SET_CONTENTS">
+              <PropertyRef Name="BookID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOOK_SET___BookS__47DBAE45">
+          <End Role="BOOK_SETS" Type="Self.BOOK_SETS" Multiplicity="1" />
+          <End Role="BOOK_SET_CONTENTS" Type="Self.BOOK_SET_CONTENTS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOOK_SETS">
+              <PropertyRef Name="BookSetID" />
+            </Principal>
+            <Dependent Role="BOOK_SET_CONTENTS">
+              <PropertyRef Name="BookSetID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOOKLEND__BookSe__4CA06362">
+          <End Role="BOOK_SETS" Type="Self.BOOK_SETS" Multiplicity="1" />
+          <End Role="BOOKLEND" Type="Self.BOOKLEND" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOOK_SETS">
+              <PropertyRef Name="BookSetID" />
+            </Principal>
+            <Dependent Role="BOOKLEND">
+              <PropertyRef Name="BookSetID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOOKLEND__Reader__4BAC3F29">
+          <End Role="READERS" Type="Self.READERS" Multiplicity="1" />
+          <End Role="BOOKLEND" Type="Self.BOOKLEND" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="READERS">
+              <PropertyRef Name="ReaderID" />
+            </Principal>
+            <Dependent Role="BOOKLEND">
+              <PropertyRef Name="ReaderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOOKS__AuthorID__4222D4EF">
+          <End Role="AUTHORS" Type="Self.AUTHORS" Multiplicity="1" />
+          <End Role="BOOKS" Type="Self.BOOKS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AUTHORS">
+              <PropertyRef Name="AuthorID" />
+            </Principal>
+            <Dependent Role="BOOKS">
+              <PropertyRef Name="AuthorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOOKS__Publisher__4316F928">
+          <End Role="PUBLISHERS" Type="Self.PUBLISHERS" Multiplicity="1" />
+          <End Role="BOOKS" Type="Self.BOOKS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PUBLISHERS">
+              <PropertyRef Name="PublisherID" />
+            </Principal>
+            <Dependent Role="BOOKS">
+              <PropertyRef Name="PublisherID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EMPLOYEES__RoleI__398D8EEE">
+          <End Role="ROLES" Type="Self.ROLES" Multiplicity="1" />
+          <End Role="EMPLOYEES" Type="Self.EMPLOYEES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ROLES">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="EMPLOYEES">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище libModelContainer">
+          <EntitySet Name="AUTHORS" EntityType="Self.AUTHORS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BOOK_SET_CONTENTS" EntityType="Self.BOOK_SET_CONTENTS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BOOK_SETS" EntityType="Self.BOOK_SETS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BOOKLEND" EntityType="Self.BOOKLEND" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BOOKS" EntityType="Self.BOOKS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EMPLOYEES" EntityType="Self.EMPLOYEES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PUBLISHERS" EntityType="Self.PUBLISHERS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="READERS" EntityType="Self.READERS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ROLES" EntityType="Self.ROLES" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__BOOK_SET___BookI__48CFD27E" Association="Self.FK__BOOK_SET___BookI__48CFD27E">
+            <End Role="BOOKS" EntitySet="BOOKS" />
+            <End Role="BOOK_SET_CONTENTS" EntitySet="BOOK_SET_CONTENTS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOOK_SET___BookS__47DBAE45" Association="Self.FK__BOOK_SET___BookS__47DBAE45">
+            <End Role="BOOK_SETS" EntitySet="BOOK_SETS" />
+            <End Role="BOOK_SET_CONTENTS" EntitySet="BOOK_SET_CONTENTS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOOKLEND__BookSe__4CA06362" Association="Self.FK__BOOKLEND__BookSe__4CA06362">
+            <End Role="BOOK_SETS" EntitySet="BOOK_SETS" />
+            <End Role="BOOKLEND" EntitySet="BOOKLEND" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOOKLEND__Reader__4BAC3F29" Association="Self.FK__BOOKLEND__Reader__4BAC3F29">
+            <End Role="READERS" EntitySet="READERS" />
+            <End Role="BOOKLEND" EntitySet="BOOKLEND" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOOKS__AuthorID__4222D4EF" Association="Self.FK__BOOKS__AuthorID__4222D4EF">
+            <End Role="AUTHORS" EntitySet="AUTHORS" />
+            <End Role="BOOKS" EntitySet="BOOKS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOOKS__Publisher__4316F928" Association="Self.FK__BOOKS__Publisher__4316F928">
+            <End Role="PUBLISHERS" EntitySet="PUBLISHERS" />
+            <End Role="BOOKS" EntitySet="BOOKS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EMPLOYEES__RoleI__398D8EEE" Association="Self.FK__EMPLOYEES__RoleI__398D8EEE">
+            <End Role="ROLES" EntitySet="ROLES" />
+            <End Role="EMPLOYEES" EntitySet="EMPLOYEES" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="libModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AUTHORS">
+          <Key>
+            <PropertyRef Name="AuthorID" />
+          </Key>
+          <Property Name="AuthorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AuthorName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="BOOKS" Relationship="Self.FK__BOOKS__AuthorID__4222D4EF" FromRole="AUTHORS" ToRole="BOOKS" />
+        </EntityType>
+        <EntityType Name="BOOK_SET_CONTENTS">
+          <Key>
+            <PropertyRef Name="BookSetContentID" />
+          </Key>
+          <Property Name="BookSetContentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BookSetID" Type="Int32" Nullable="false" />
+          <Property Name="BookID" Type="Int32" Nullable="false" />
+          <Property Name="ReturnDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="BOOKS" Relationship="Self.FK__BOOK_SET___BookI__48CFD27E" FromRole="BOOK_SET_CONTENTS" ToRole="BOOKS" />
+          <NavigationProperty Name="BOOK_SETS" Relationship="Self.FK__BOOK_SET___BookS__47DBAE45" FromRole="BOOK_SET_CONTENTS" ToRole="BOOK_SETS" />
+        </EntityType>
+        <EntityType Name="BOOK_SETS">
+          <Key>
+            <PropertyRef Name="BookSetID" />
+          </Key>
+          <Property Name="BookSetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BookSetName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="BOOK_SET_CONTENTS" Relationship="Self.FK__BOOK_SET___BookS__47DBAE45" FromRole="BOOK_SETS" ToRole="BOOK_SET_CONTENTS" />
+          <NavigationProperty Name="BOOKLEND" Relationship="Self.FK__BOOKLEND__BookSe__4CA06362" FromRole="BOOK_SETS" ToRole="BOOKLEND" />
+        </EntityType>
+        <EntityType Name="BOOKLEND">
+          <Key>
+            <PropertyRef Name="BookLendID" />
+          </Key>
+          <Property Name="BookLendID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ReaderID" Type="Int32" Nullable="false" />
+          <Property Name="BookSetID" Type="Int32" Nullable="false" />
+          <Property Name="LendDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ExpreturnDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ActualReturnDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="BOOK_SETS" Relationship="Self.FK__BOOKLEND__BookSe__4CA06362" FromRole="BOOKLEND" ToRole="BOOK_SETS" />
+          <NavigationProperty Name="READERS" Relationship="Self.FK__BOOKLEND__Reader__4BAC3F29" FromRole="BOOKLEND" ToRole="READERS" />
+        </EntityType>
+        <EntityType Name="BOOKS">
+          <Key>
+            <PropertyRef Name="BookID" />
+          </Key>
+          <Property Name="BookID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ISBN" Type="String" MaxLength="13" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BookName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AuthorID" Type="Int32" Nullable="false" />
+          <Property Name="PublisherID" Type="Int32" Nullable="false" />
+          <Property Name="PublDate" Type="Int32" Nullable="false" />
+          <Property Name="IsTaken" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="AUTHORS" Relationship="Self.FK__BOOKS__AuthorID__4222D4EF" FromRole="BOOKS" ToRole="AUTHORS" />
+          <NavigationProperty Name="BOOK_SET_CONTENTS" Relationship="Self.FK__BOOK_SET___BookI__48CFD27E" FromRole="BOOKS" ToRole="BOOK_SET_CONTENTS" />
+          <NavigationProperty Name="PUBLISHERS" Relationship="Self.FK__BOOKS__Publisher__4316F928" FromRole="BOOKS" ToRole="PUBLISHERS" />
+        </EntityType>
+        <EntityType Name="EMPLOYEES">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <Property Name="IsWorking" Type="Boolean" Nullable="false" />
+          <Property Name="ELogin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EPassword" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="ROLES" Relationship="Self.FK__EMPLOYEES__RoleI__398D8EEE" FromRole="EMPLOYEES" ToRole="ROLES" />
+        </EntityType>
+        <EntityType Name="PUBLISHERS">
+          <Key>
+            <PropertyRef Name="PublisherID" />
+          </Key>
+          <Property Name="PublisherID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PublisherName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="BOOKS" Relationship="Self.FK__BOOKS__Publisher__4316F928" FromRole="PUBLISHERS" ToRole="BOOKS" />
+        </EntityType>
+        <EntityType Name="READERS">
+          <Key>
+            <PropertyRef Name="ReaderID" />
+          </Key>
+          <Property Name="ReaderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ReaderName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BirthDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IsReading" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="BOOKLEND" Relationship="Self.FK__BOOKLEND__Reader__4BAC3F29" FromRole="READERS" ToRole="BOOKLEND" />
+        </EntityType>
+        <EntityType Name="ROLES">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="EMPLOYEES" Relationship="Self.FK__EMPLOYEES__RoleI__398D8EEE" FromRole="ROLES" ToRole="EMPLOYEES" />
+        </EntityType>
+        <Association Name="FK__BOOKS__AuthorID__4222D4EF">
+          <End Role="AUTHORS" Type="Self.AUTHORS" Multiplicity="1" />
+          <End Role="BOOKS" Type="Self.BOOKS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AUTHORS">
+              <PropertyRef Name="AuthorID" />
+            </Principal>
+            <Dependent Role="BOOKS">
+              <PropertyRef Name="AuthorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOOK_SET___BookI__48CFD27E">
+          <End Role="BOOKS" Type="Self.BOOKS" Multiplicity="1" />
+          <End Role="BOOK_SET_CONTENTS" Type="Self.BOOK_SET_CONTENTS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOOKS">
+              <PropertyRef Name="BookID" />
+            </Principal>
+            <Dependent Role="BOOK_SET_CONTENTS">
+              <PropertyRef Name="BookID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOOK_SET___BookS__47DBAE45">
+          <End Role="BOOK_SETS" Type="Self.BOOK_SETS" Multiplicity="1" />
+          <End Role="BOOK_SET_CONTENTS" Type="Self.BOOK_SET_CONTENTS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOOK_SETS">
+              <PropertyRef Name="BookSetID" />
+            </Principal>
+            <Dependent Role="BOOK_SET_CONTENTS">
+              <PropertyRef Name="BookSetID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOOKLEND__BookSe__4CA06362">
+          <End Role="BOOK_SETS" Type="Self.BOOK_SETS" Multiplicity="1" />
+          <End Role="BOOKLEND" Type="Self.BOOKLEND" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOOK_SETS">
+              <PropertyRef Name="BookSetID" />
+            </Principal>
+            <Dependent Role="BOOKLEND">
+              <PropertyRef Name="BookSetID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOOKLEND__Reader__4BAC3F29">
+          <End Role="READERS" Type="Self.READERS" Multiplicity="1" />
+          <End Role="BOOKLEND" Type="Self.BOOKLEND" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="READERS">
+              <PropertyRef Name="ReaderID" />
+            </Principal>
+            <Dependent Role="BOOKLEND">
+              <PropertyRef Name="ReaderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOOKS__Publisher__4316F928">
+          <End Role="PUBLISHERS" Type="Self.PUBLISHERS" Multiplicity="1" />
+          <End Role="BOOKS" Type="Self.BOOKS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PUBLISHERS">
+              <PropertyRef Name="PublisherID" />
+            </Principal>
+            <Dependent Role="BOOKS">
+              <PropertyRef Name="PublisherID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EMPLOYEES__RoleI__398D8EEE">
+          <End Role="ROLES" Type="Self.ROLES" Multiplicity="1" />
+          <End Role="EMPLOYEES" Type="Self.EMPLOYEES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ROLES">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="EMPLOYEES">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="libEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AUTHORS" EntityType="Self.AUTHORS" />
+          <EntitySet Name="BOOK_SET_CONTENTS" EntityType="Self.BOOK_SET_CONTENTS" />
+          <EntitySet Name="BOOK_SETS" EntityType="Self.BOOK_SETS" />
+          <EntitySet Name="BOOKLEND" EntityType="Self.BOOKLEND" />
+          <EntitySet Name="BOOKS" EntityType="Self.BOOKS" />
+          <EntitySet Name="EMPLOYEES" EntityType="Self.EMPLOYEES" />
+          <EntitySet Name="PUBLISHERS" EntityType="Self.PUBLISHERS" />
+          <EntitySet Name="READERS" EntityType="Self.READERS" />
+          <EntitySet Name="ROLES" EntityType="Self.ROLES" />
+          <AssociationSet Name="FK__BOOKS__AuthorID__4222D4EF" Association="Self.FK__BOOKS__AuthorID__4222D4EF">
+            <End Role="AUTHORS" EntitySet="AUTHORS" />
+            <End Role="BOOKS" EntitySet="BOOKS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOOK_SET___BookI__48CFD27E" Association="Self.FK__BOOK_SET___BookI__48CFD27E">
+            <End Role="BOOKS" EntitySet="BOOKS" />
+            <End Role="BOOK_SET_CONTENTS" EntitySet="BOOK_SET_CONTENTS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOOK_SET___BookS__47DBAE45" Association="Self.FK__BOOK_SET___BookS__47DBAE45">
+            <End Role="BOOK_SETS" EntitySet="BOOK_SETS" />
+            <End Role="BOOK_SET_CONTENTS" EntitySet="BOOK_SET_CONTENTS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOOKLEND__BookSe__4CA06362" Association="Self.FK__BOOKLEND__BookSe__4CA06362">
+            <End Role="BOOK_SETS" EntitySet="BOOK_SETS" />
+            <End Role="BOOKLEND" EntitySet="BOOKLEND" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOOKLEND__Reader__4BAC3F29" Association="Self.FK__BOOKLEND__Reader__4BAC3F29">
+            <End Role="READERS" EntitySet="READERS" />
+            <End Role="BOOKLEND" EntitySet="BOOKLEND" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOOKS__Publisher__4316F928" Association="Self.FK__BOOKS__Publisher__4316F928">
+            <End Role="PUBLISHERS" EntitySet="PUBLISHERS" />
+            <End Role="BOOKS" EntitySet="BOOKS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EMPLOYEES__RoleI__398D8EEE" Association="Self.FK__EMPLOYEES__RoleI__398D8EEE">
+            <End Role="ROLES" EntitySet="ROLES" />
+            <End Role="EMPLOYEES" EntitySet="EMPLOYEES" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище libModelContainer" CdmEntityContainer="libEntities">
+          <EntitySetMapping Name="AUTHORS">
+            <EntityTypeMapping TypeName="libModel.AUTHORS">
+              <MappingFragment StoreEntitySet="AUTHORS">
+                <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+                <ScalarProperty Name="AuthorName" ColumnName="AuthorName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BOOK_SET_CONTENTS">
+            <EntityTypeMapping TypeName="libModel.BOOK_SET_CONTENTS">
+              <MappingFragment StoreEntitySet="BOOK_SET_CONTENTS">
+                <ScalarProperty Name="BookSetContentID" ColumnName="BookSetContentID" />
+                <ScalarProperty Name="BookSetID" ColumnName="BookSetID" />
+                <ScalarProperty Name="BookID" ColumnName="BookID" />
+                <ScalarProperty Name="ReturnDate" ColumnName="ReturnDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BOOK_SETS">
+            <EntityTypeMapping TypeName="libModel.BOOK_SETS">
+              <MappingFragment StoreEntitySet="BOOK_SETS">
+                <ScalarProperty Name="BookSetID" ColumnName="BookSetID" />
+                <ScalarProperty Name="BookSetName" ColumnName="BookSetName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BOOKLEND">
+            <EntityTypeMapping TypeName="libModel.BOOKLEND">
+              <MappingFragment StoreEntitySet="BOOKLEND">
+                <ScalarProperty Name="BookLendID" ColumnName="BookLendID" />
+                <ScalarProperty Name="ReaderID" ColumnName="ReaderID" />
+                <ScalarProperty Name="BookSetID" ColumnName="BookSetID" />
+                <ScalarProperty Name="LendDate" ColumnName="LendDate" />
+                <ScalarProperty Name="ExpreturnDate" ColumnName="ExpreturnDate" />
+                <ScalarProperty Name="ActualReturnDate" ColumnName="ActualReturnDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BOOKS">
+            <EntityTypeMapping TypeName="libModel.BOOKS">
+              <MappingFragment StoreEntitySet="BOOKS">
+                <ScalarProperty Name="BookID" ColumnName="BookID" />
+                <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+                <ScalarProperty Name="BookName" ColumnName="BookName" />
+                <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+                <ScalarProperty Name="PublisherID" ColumnName="PublisherID" />
+                <ScalarProperty Name="PublDate" ColumnName="PublDate" />
+                <ScalarProperty Name="IsTaken" ColumnName="IsTaken" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EMPLOYEES">
+            <EntityTypeMapping TypeName="libModel.EMPLOYEES">
+              <MappingFragment StoreEntitySet="EMPLOYEES">
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="IsWorking" ColumnName="IsWorking" />
+                <ScalarProperty Name="ELogin" ColumnName="ELogin" />
+                <ScalarProperty Name="EPassword" ColumnName="EPassword" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PUBLISHERS">
+            <EntityTypeMapping TypeName="libModel.PUBLISHERS">
+              <MappingFragment StoreEntitySet="PUBLISHERS">
+                <ScalarProperty Name="PublisherID" ColumnName="PublisherID" />
+                <ScalarProperty Name="PublisherName" ColumnName="PublisherName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="READERS">
+            <EntityTypeMapping TypeName="libModel.READERS">
+              <MappingFragment StoreEntitySet="READERS">
+                <ScalarProperty Name="ReaderID" ColumnName="ReaderID" />
+                <ScalarProperty Name="ReaderName" ColumnName="ReaderName" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="IsReading" ColumnName="IsReading" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ROLES">
+            <EntityTypeMapping TypeName="libModel.ROLES">
+              <MappingFragment StoreEntitySet="ROLES">
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
